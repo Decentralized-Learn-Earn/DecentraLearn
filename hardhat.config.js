@@ -27,10 +27,6 @@ module.exports = {
   },
   networks: {
     hardhat: {
-      forking: {
-        url: process.env.ALCHEMY_FORK,
-        blockNumber: 9287019
-      }
     },
     rinkeby: {
       url: process.env.RINKEBY_URL,
