@@ -1,7 +1,14 @@
 import logo from './logo5.jpg';
 import {useState} from 'react';
+import React from 'react';
 import './App.css';
 import './modal'
+import Navbar from './components';
+import {BrowserRouter as Router} from 'react-router-dom'
+
+
+
+
 
 
 
@@ -48,7 +55,12 @@ function App() {
   }
 
   return (
+    
     <div className="App">
+      <Router>
+      <Navbar />
+    </Router>
+      
       <header className="App-header">
         
         <img src={logo} alt="HTML5 Icon" width="550" height="400"></img>
