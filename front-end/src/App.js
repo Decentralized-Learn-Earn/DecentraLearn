@@ -1,7 +1,10 @@
-import logo from './logo.svg';
+import logo from './logo5.jpg';
 import {useState} from 'react';
 import './App.css';
-import { ErrorFragment } from '@ethersproject/abi';
+import './modal'
+
+
+
 
 
 function App() {
@@ -12,6 +15,7 @@ function App() {
     token: '',
     
   });
+  
 
   const [error, setError] = useState({
     address: ''
@@ -46,7 +50,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
+        <img src={logo} alt="HTML5 Icon" width="550" height="400"></img>
+        
        <form onSubmit={onSubmit}>
          <label>
            Contract Address:
