@@ -1,8 +1,5 @@
 import MetaMaskOnboarding from '@metamask/onboarding';
 import { } from 'react-router';
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './navBarElements';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Navbar from './index';
 const Web3 = require('web3');
 
 
