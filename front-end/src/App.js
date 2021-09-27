@@ -2,11 +2,11 @@ import logo from './logo5.jpg';
 import {useState} from 'react';
 import React from 'react';
 import './App.css';
-import './modal'
 import Navbar from './components';
-import {BrowserRouter as Router} from 'react-router-dom'
-
-
+import {BrowserRouter as Router} from 'react-router-dom';
+import uploadContent from './ipfs/upload';
+import './components/metamask';
+import OnboardingButton from './components/metamask';
 
 
 
@@ -22,7 +22,8 @@ function App() {
     token: '',
     
   });
-  
+  const NavBtnLink = document.getElementsByClassName('Navbar')[4]
+const WalletConnect = document.getElementsByClassName('Wallet-connect')[0]
 
   const [error, setError] = useState({
     address: ''
@@ -40,8 +41,11 @@ function App() {
 
   const showData = () => {
     console.log('Form: ', form);
+    console.log('IPFS/FLEEK info', uploadContent)
   
   }
+
+  
 
   const onSubmit = (e) => {
     if(form.address.length !== 42) {
@@ -50,16 +54,21 @@ function App() {
       }));
       return;
     }
+    uploadContent()
     showData();
     e.preventDefault();
   }
 
   return (
     
-    <div className="App">
+    <div className="Navbar">
       <Router>
       <Navbar />
     </Router>
+
+    <div className="Wallet-connect">
+      
+    </div>
       
       <header className="App-header">
         
@@ -98,7 +107,6 @@ function App() {
            <input onChange={onChange} name="token" value={form.token}/>
          </label>
          <hr/>
-
          
          <div>
          <button>Submit</button>
