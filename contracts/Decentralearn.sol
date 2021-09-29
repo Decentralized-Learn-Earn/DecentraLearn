@@ -4,14 +4,18 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
-
+import "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol";
+import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 /**
  * @title Decentralized Learn & Earn DApp
  * @author Shivali, Daniel, Dilan, Jayesh @ EthOnline Sep-Oct, 2021 
  **/
-contract Decentralearn is AccessControl{
-    uint public campaignId;
+contract Decentralearn is AccessControl, KeeperCompatibleInterface {
+    uint public campaignId; 
     address public owner;
+    uint [] public awaitingUpkeep;
+    uint [] public upkeepFulfilled;
+    uint public upkeepCampaignId;
 
     struct CampaignCreator {
         address tokenAddress;
@@ -70,6 +74,9 @@ contract Decentralearn is AccessControl{
   @param _NumOftokensPerTrng uint
   @param _cid string
  **/
+
+
+
     function createCampaign(         
         address _tokenAddress, 
         uint _totalNumOftokens,
@@ -85,6 +92,7 @@ contract Decentralearn is AccessControl{
         console.log(token.name());
 
         ++campaignId;
+        awaitingUpkeep.push(campaignId);
         CampaignCreator storage campaign = campaigns[_tokenAddress];
         campaign.tokenAddress = _tokenAddress;
         campaign.totalNumOftokens=_totalNumOftokens;
@@ -117,11 +125,13 @@ function getCampaignInfo(address _tokenAddress) public view returns(address addr
   @param _tokenAddress address
   @param _campaignId uint
  **/
-    function startCampaign(address _tokenAddress, uint _campaignId) external hasTokenBalance(_tokenAddress) {
+    function startCampaign(address _tokenAddress, uint _campaignId) internal hasTokenBalance(_tokenAddress) {
             CampaignCreator storage campaign = campaigns[_tokenAddress];
             require(campaign.campaignId== _campaignId, "Campaign ID does not match");            
             require(ERC20(_tokenAddress).balanceOf(address(this)) >= campaign.totalNumOftokens, "Not enough tokens!");
             campaign.isActive = true;
+            ++upkeepCampaignId;
+            upkeepFulfilled.push(upkeepCampaignId);
             ERC20 token = ERC20(_tokenAddress);
             emit CampaignStarted(_tokenAddress, token.name(), _campaignId, IERC20(_tokenAddress).balanceOf(address(this)));
         }
@@ -179,6 +189,17 @@ function removeCampaign(address _tokenAddress, uint _campaignId) external onlyRo
         delete campaigns[_tokenAddress];        
 }
 
+  function checkUpkeep(bytes calldata checkData) external override returns (bool upkeepNeeded, bytes memory performData ) {
+     upkeepNeeded = (awaitingUpkeep.length > upkeepCampaignId);
+     performData = checkData;
+    
+  }
+
+    function performUpkeep(bytes calldata) external override {
+    
+    startCampaign(0x1b673506C3a3405f40205AB460111831ed2E082a, campaignId);
+        
+    }
 
 function changeOwnership(address _newowner) external onlyRole(DEFAULT_ADMIN_ROLE){
     owner = _newowner;
