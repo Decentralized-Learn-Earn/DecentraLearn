@@ -56,7 +56,7 @@ describe("Decentralearn", function () {
               //address _tokenAddress, uint _totalNumOftokens, uint  _NumOftokensPerTrng,string calldata _cid    
               tokenAddress = token.address;
               cID = "QmV46tyKPs6qRnpDWYV9Dxd99CWPCcqw2oYsTGmYJ1nMc4";
-              await contract.connect(signer1).createCampaign(tokenAddress, 3000, 5, cID); 
+              await contract.connect(signer1).createCampaign(tokenAddress, ethers.utils.parseEther('3000'), 5, cID); 
               console.log("********CREATES CAMPAIGN***************");          
     });
   
@@ -66,6 +66,12 @@ describe("Decentralearn", function () {
     
     it('should NOT create a Duplicate Campaign ', async () => {
       await contract.connect(signer1).createCampaign(tokenAddress, 200, 1, cID); 
+      //assert.equal((await contract.campaignId()), 1);   //should be 1 not 0    
+    });
+
+    it('call upkeep ', async () => {
+      var str = "0x657468657265756d000000000000000000000000000000000000000000000000";
+      await contract.connect(signer1).checkUpkeep(str); 
       //assert.equal((await contract.campaignId()), 1);   //should be 1 not 0    
     });
   }); 
@@ -84,18 +90,42 @@ describe("Decentralearn", function () {
     });  
 
     it('should have set campaign correctly with isActive as False', async () => {    
-      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive} = await contract.getCampaignInfo(tokenAddress2);  
+      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive, _state} = await contract.getCampaignInfo(tokenAddress2);  
       console.log("****************************************"); 
       console.log(addrs);
       console.log(totalAmount);
       console.log(amtPerTraining);
       console.log(_IPFSCid);
       console.log(_campaignId);  
-      console.log(_isActive);  
+      console.log(_isActive); 
+      console.log(_state); 
       console.log("****************************************");     
     });
     
   }); 
+
+
+  describe('Admin: ENDS CAMPAIGN 2', () => {
+    before(async () => {                      
+              tokenAddress2 = token2.address;
+              await contract.connect(signer0).endCampaign(tokenAddress2, 2); 
+              console.log("********END CAMPAIGN 2***************");          
+    });
+
+    it('should have set campaign correctly with isActive as False', async () => {    
+      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive, _state} = await contract.getCampaignInfo(tokenAddress2);  
+      console.log("****************************************"); 
+      console.log(addrs);
+      console.log(totalAmount);
+      console.log(amtPerTraining);
+      console.log(_IPFSCid);
+      console.log(_campaignId);  
+      console.log(_isActive); 
+      console.log(_state); 
+      console.log("****************************************");     
+    });
+    
+  });
 
   
   describe('Uploader 1: STARTS CAMPAIGN', () => {
@@ -112,7 +142,7 @@ describe("Decentralearn", function () {
     console.log("Contract's Token Balance: "+ await (ethers.utils.formatEther(x)));
     console.log("****************************************");
 
-              await contract.connect(signer1).startCampaign(tokenAddress, 1); 
+              await contract.connect(signer1).startCampaign(tokenAddress); 
               console.log("********START CAMPAIGN***************");          
     });
   
@@ -122,14 +152,15 @@ describe("Decentralearn", function () {
     }); 
     
     it('should have set campaign correctly', async () => {    
-      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive} = await contract.getCampaignInfo(tokenAddress);  
+      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive, _state} = await contract.getCampaignInfo(tokenAddress2);  
       console.log("****************************************"); 
       console.log(addrs);
       console.log(totalAmount);
       console.log(amtPerTraining);
       console.log(_IPFSCid);
       console.log(_campaignId);  
-      console.log(_isActive);  
+      console.log(_isActive); 
+      console.log(_state); 
       console.log("****************************************");     
     });
   }); 
@@ -164,7 +195,11 @@ describe("Decentralearn", function () {
       const tokenContract = new hre.ethers.Contract(tokenAddress, abi, signer0);
       const x = await tokenContract.balanceOf(contract.address);  
       console.log("Contract's Token Balance: "+ await (x)); //await (ethers.utils.formatEther(x)));
-      console.log("****************************************");      
+      console.log("****************************************"); 
+      
+      const y = await tokenContract.balanceOf(addr2);  
+      console.log("User's Token Balance: "+ await (ethers.utils.formatEther(y)));
+      console.log("****************************************");
     }); 
      
     it('should not be able to claim ', async () => {
@@ -188,15 +223,16 @@ describe("Decentralearn", function () {
       
 
     it('should have removed campaign 2', async () => {    
-      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive} = await contract.getCampaignInfo(tokenAddress2);  
+      let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive, _state} = await contract.getCampaignInfo(tokenAddress2);  
       console.log("****************************************"); 
       console.log(addrs);
       console.log(totalAmount);
       console.log(amtPerTraining);
       console.log(_IPFSCid);
       console.log(_campaignId);  
-      console.log(_isActive);  
-      console.log("****************************************");     
+      console.log(_isActive); 
+      console.log(_state); 
+      console.log("****************************************");      
     });
     
   }); 
