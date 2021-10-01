@@ -39,6 +39,10 @@ module.exports = {
     kovan: {
       url: process.env.KOVAN_URL,
       accounts: [process.env.PRIVATE_KEY]
-  }
+  },
+    kovanpocket: {
+      url: process.env.KOVAN_POCKET,
+      accounts: [process.env.PRIVATE_KEY]
+  },
 },
 };
