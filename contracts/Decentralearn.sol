@@ -8,7 +8,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol";
 
 /**
  * @title Decentralized Learn & Earn DApp
- * @author Shivali, Daniel, Dilan, Jayesh @ EthOnline Sep-Oct, 2021 
+ * @author Shivali, Daniel, Dilan @ EthOnline Sep-Oct, 2021 
  **/
 contract Decentralearn is AccessControl, KeeperCompatibleInterface {
     uint public campaignId;
@@ -19,6 +19,7 @@ contract Decentralearn is AccessControl, KeeperCompatibleInterface {
 
     struct CampaignCreator {
         address tokenAddress;
+        address uploader;
         uint totalNumOftokens;
         uint  NumOftokensPerTrng;
         string cid;
@@ -27,7 +28,7 @@ contract Decentralearn is AccessControl, KeeperCompatibleInterface {
         CampaignState state;
     }
             
-    mapping(address => CampaignCreator) campaigns;
+    mapping(address => CampaignCreator) public campaigns;
 
     mapping(address => mapping(address => bool)) userCompletedTraining; 
     mapping(address => mapping(address => bool)) payoutForTraining;
@@ -42,7 +43,8 @@ contract Decentralearn is AccessControl, KeeperCompatibleInterface {
 
     constructor(address _owner) {
               owner = _owner; 
-              _setupRole(DEFAULT_ADMIN_ROLE, _owner); 
+              _setupRole(DEFAULT_ADMIN_ROLE, _owner);
+              //_setupRole(bytes32("UPLOADER_ROLE"), _owner); 
               _setupRole(bytes32("USER_ROLE"), _owner); 
     }
 
@@ -91,7 +93,8 @@ contract Decentralearn is AccessControl, KeeperCompatibleInterface {
         external 
         noDuplicateCampaign(_tokenAddress)        
         {
-        require(_totalNumOftokens > 0, "Campaign cannot start with 0 give-away tokens");
+        require(_totalNumOftokens > 0, "Campaign cannot be created with 0 tokens");
+        require(_NumOftokensPerTrng > 0, "Campaign cannot be created with 0 give-away tokens per training");
         ERC20 token = ERC20(_tokenAddress);        
         require(token.totalSupply() > 0, "Token does not have enough supply");
         console.log(token.totalSupply());
@@ -100,6 +103,7 @@ contract Decentralearn is AccessControl, KeeperCompatibleInterface {
         ++campaignId;
         CampaignCreator storage campaign = campaigns[_tokenAddress];
         campaign.tokenAddress = _tokenAddress;
+        campaign.uploader = msg.sender;
         campaign.totalNumOftokens=_totalNumOftokens;
         campaign.NumOftokensPerTrng=_NumOftokensPerTrng;
         campaign.cid=_cid;
@@ -168,7 +172,8 @@ function getUserCompldTraingInfo(address _user, address _tokenAddress) public vi
      * @param _tokenAddress token address
 */
 function submitTokenClaim(address _user,address _tokenAddress) external onlyRole(bytes32("USER_ROLE")) hasEnoughTokenBalance(_tokenAddress) isCampLive(_tokenAddress) {
-    require(payoutForTraining[msg.sender][_tokenAddress]==false, "You already claimed the tokens for this training!");
+    require(userCompletedTraining[_user][_tokenAddress]==true, "You have not completed the training yet!");
+    require(payoutForTraining[msg.sender][_tokenAddress]==false, "You already claimed the tokens for this training!");    
             payoutForTraining[msg.sender][_tokenAddress] = true;
             CampaignCreator memory campaign = campaigns[_tokenAddress];
             uint amount = campaign.NumOftokensPerTrng; 
@@ -198,9 +203,11 @@ function removeCampaign(address _tokenAddress, uint _campaignId) external onlyRo
      * @param _tokenAddress token address
      * @param _campaignId Campaign ID
 */
-function endCampaign(address _tokenAddress, uint _campaignId) external onlyRole(DEFAULT_ADMIN_ROLE){
+function endCampaign(address _tokenAddress, uint _campaignId) external {
         CampaignCreator storage campaign = campaigns[_tokenAddress];
-        require(campaign.campaignId== _campaignId, "Campaign ID does not match");               
+        require(campaign.uploader== msg.sender, "Only campaign uploader can end the campaign");
+        require(campaign.campaignId== _campaignId, "Campaign ID does not match"); 
+        require(campaign.isActive== true, "Campaign is not in active status");              
         campaign.isActive = false;
         campaign.state = CampaignState.ended;        
         emit CampaignEnded(_tokenAddress,  campaign.campaignId, campaign.cid, campaign.isActive);

@@ -105,14 +105,13 @@ describe("Decentralearn", function () {
   }); 
 
 
-  describe('Admin: ENDS CAMPAIGN 2', () => {
+  describe('Some other user trying to: ENDS CAMPAIGN 2', () => {
     before(async () => {                      
               tokenAddress2 = token2.address;
-              await contract.connect(signer0).endCampaign(tokenAddress2, 2); 
-              console.log("********END CAMPAIGN 2***************");          
+              await contract.connect(signer1).endCampaign(tokenAddress2, 2);               
     });
 
-    it('should have set campaign correctly with isActive as False', async () => {    
+    it('should not allow to end the campaign', async () => {    
       let {addrs, totalAmount, amtPerTraining, _IPFSCid, _campaignId, _isActive, _state} = await contract.getCampaignInfo(tokenAddress2);  
       console.log("****************************************"); 
       console.log(addrs);
