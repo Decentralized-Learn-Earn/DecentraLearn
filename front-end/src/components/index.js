@@ -3,6 +3,7 @@ import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './navBarElements
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import OnboardingButton from './metamask'
 import StartCampaign from './startCampaign';
+import logo from './logoNav.jpg';
 //rafce + enter creates a template
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
         <>
         <Nav>
             <NavLink to="/" >
-                <img src="" alt=""/>
+            <img src={logo} alt="HTML5 Icon" width="100" height="60"></img>
             </NavLink>
             <Bars />
             <NavMenu> 

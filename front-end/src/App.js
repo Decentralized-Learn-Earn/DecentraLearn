@@ -1,5 +1,5 @@
 import logo from './logo5.jpg';
-
+import MTable from './components/MTable'
 import React from 'react';
 import './App.css';
 import Navbar from './components';
@@ -22,16 +22,11 @@ function App() {
       <Route path="/startcampaign" component={StartCampaign} />
     </Router>
 
-    <div className="Wallet-connect">
-      
+    <div className="Campaigns">
+    <MTable />
     </div>
       
-      <header className="App-header">
-        
-        <img src={logo} alt="HTML5 Icon" width="550" height="400"></img>
-        
-       
-      </header>
+      
     </div>
   );
 }
