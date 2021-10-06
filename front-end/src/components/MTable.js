@@ -50,15 +50,16 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 let USERS = [], STATUSES = ['Active', 'Complete'];
-for(let i=0;i<14;i++) {
+for(let i=0;i<2;i++) {
     USERS[i] = {
-        name: faker.name.findName(),
-        email: faker.internet.email(),
-        phone: faker.phone.phoneNumber(),
-        jobTitle: faker.name.jobTitle(),
-        company: faker.company.companyName(),
+        name: "Uniswap",
+        email: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+        phone: "https://uniswap.org/",
+        
+  
         joinDate: faker.date.past().toLocaleDateString('en-US'),
         status: STATUSES[Math.floor(Math.random() * STATUSES.length)]
+        
     }
 }
 
@@ -89,11 +90,12 @@ function MTable() {
         </TableHead>
         <TableBody>
           {USERS.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-            <TableRow key={row.name}>
+            <TableRow key={row.name, row.name1}>
               <TableCell>
                   <Grid container>
                       <Grid item lg={2}>
-                          <Avatar alt={row.name} src='.' className={classes.avatar}/>
+                          
+                          
                       </Grid>
                       <Grid item lg={10}>
                         

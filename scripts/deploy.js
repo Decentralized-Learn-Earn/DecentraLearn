@@ -14,6 +14,11 @@ async function main() {
     const token = await Token.deploy(initialSupply);
     await token.deployed();
 
+    const initialSupply2 = await ethers.utils.parseEther("10000");
+    const Token2 = await ethers.getContractFactory("Danieltoken");
+    const token2 = await Token2.deploy(initialSupply);
+    await token2.deployed();
+
 //*Use below to deploy with ethernal*
   //await hre.ethernal.push({
  // name: 'Decentralearn',
@@ -25,6 +30,7 @@ async function main() {
 
   console.log("DecentraLearn deployed to:", contract.address);
   console.log("ShivaliToken deployed to:", token.address);
+  console.log("DanielToken deployed to:", token2.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
