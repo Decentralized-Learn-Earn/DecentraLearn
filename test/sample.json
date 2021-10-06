@@ -1,0 +1,39 @@
+{contract_adress: 0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9,
+total_number_tokens: 1000,
+tokens_per_training: 2,
+url_content: ["https://aave.com/", "https://www.coingecko.com"],
+questions: [
+  {
+  question: "What is aave?",
+  answers: [
+    "An online portal of the Aar Volkschtunden Eisentchaft. A Cooperative Bank from Aar zone.",
+    "An open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets.",
+    "A portal where people can borrow assets from many banks.",
+    "A portal where people can deposit assets on many banks."],
+  correct_answer: 2
+  },
+  {question: "In order to borrow assets...",
+  answers: [
+    "An approval from aave technics is necessary. It usually takes two to three weeks. A borrow limit is set acording to financial position and payment history of the client.",
+    "A deposit of a colateral asset is necesary, and this determines the limit of the assets that can be borrowed",
+    "A deposit of a colateral asset is necesary, with no limit on borrowing afterwards.",
+    "A proof of humanity is required."],
+  correct_answer: 2,
+  },
+  {question: "The most advanced functional version of aave is...",
+  answers: [
+    "There is no version, as ethereum blockchain is inmutable.",
+    "V3.",
+    "V2.",
+    "V1."],
+  correct_answer: 3
+  },
+  {question: "Aave is...",
+  answers: [
+    "just on bitcoin blockchain",
+    "just on ethereum blockchain.",
+    "just on polygon blockchain.",
+    "on both ethereum and polygon blockchain."],
+  correct_answer: 4,
+   }]
+}

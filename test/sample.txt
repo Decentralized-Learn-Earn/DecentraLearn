@@ -1,0 +1,99 @@
+
+
+What is aave?
+1) An online portal of the Aar Volkschtunden Eisentchaft, cooperative bank from Aar zone.
+2) An open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets.
+3) A portal where people can borrow asssets from many banks.
+4) A portal where people can deposit assets on many banks.
+
+In order to borrow assets...
+1) An approval from aave technics is necessary. It usually takes two to three weeks. A borrow limit is set acording to financial position and payment history of the client.
+2) A deposit of a colaterral asset is necesary, and this determines the limit of the assets that can be borrowed
+3) A deposit of a colateral asset is necesary, with no limit on borrowing afterwards.
+4) A proof of humanity is required.
+
+The most advanced functional version of aave is...
+1) there is no version, as ethereum blockchain is inmutable.
+2) v3
+3) v2
+4) v1
+
+Aave is
+1) just on bitcoin blockchain
+2) just on ethereum blockchain
+3) just on polygon blockchain
+4) on both ethereum and polygon blockchain
+
+
+What is Compound?
+1) An online portal that explains in detail how does compound interest works.
+2) An open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets.
+3) A portal where people can borrow asssets from many banks.
+4) A portal where people can deposit assets on many banks.
+5) Both 3) and 4) are correct.
+
+Governance decisions in Compound
+1) Are taken by the capitalists that invested in Compound when it was created.
+2) Are taken by a Dao, one Compound token one vote
+3) Are taken by a Dao, one person that has Compound token, one vote independently of the amount
+4) Are taken by a CEO that is hired with that purpose.
+
+As 1 october 2021
+1) Compound token is among the first 10 coins and has a market capitalization of around 1800M uS
+2) Compound token is among the first 100 coins and has a market capitalization of around 1800M uS
+3) compound token is among the first 25 coins and has a market capitalization of around 1800M usS
+4) Compound token is not among the first 100 coins and has a market capitalization of around 1800M uS
+
+The Compound Protocol is currently deployed on the following networks:
+1) Ethereum Mainnet, Rinkeby, Kovan, Ropsten, Goerli
+2) Ethereum Mainnet, Rinkeby
+3) Ethereum Mainnet, Rinkeby and Matic Mainnet
+4) Is not deployed yet.
+
+Decentralearn...
+1) Is the learning page of the renown virtual world decentraland
+2) Is a comunity portal with information about decentralized finance
+3) Is a web3 app that provides an enviroment to set up learning campaignes from blockchain sites rewarded with there native tokens.
+4) Is a clasical web application that provides an enviroment to set up learning campaignes from blockchain ecosystem sites rewarded with there native tokens.
+
+At Decentralearn...
+1) Anybody can set up a learning campaign
+2) Only users that can provide an ERC20 token can setup a learning campaign
+3) Only authorized users can setup a learning campaing
+4) Just the owners of Decentralearn  can set up a learning campaign
+
+For each learning campaign
+1) Anybody can add a question (and corresponding answers) to that campaign that is reworded with tokens
+2) Anybody can add a question  and corresponding answers to that campaign, but the owners of the campaign should aprove them before being rewarded
+3) Anybody can add a question and corresponding answers to that campaign, but the owners of decentralearn should aprove them before being rewarded
+4) Questions and answerws of each campaign are determined at the begining and are fixed.
+
+Rewards for a succesfull answered campaign
+1) is a fix amount of tokents of the corresponding token
+2) is an amount of corresponding tokens multiplied by the number of correct answers
+3) is a fix amount of ethereum
+4) is an amount of ethereum multiplied by the number of correct answers
+
+Uniswap is a
+1) NFT portal that began at 2018 with the renowned success of the unicorn series. Is still the only one in the market that allows direct exchange of nft among the users.
+2) An NFT portal descentralized.
+3) A descentralized exchange.
+4) A traditional centralized cryptocurrency exchange.
+
+Uni token
+1) Is a project that will be delivered in 2022.
+2) Is the native Uniswap token and gives their holders vote in Uniswap governance
+3) Is a third party token that was launched through Uniswap in 2019.
+4) All previous statements are false.
+
+At Uniswap page, there is direct access to these Uniswap comunities.
+1) Just Facebook.
+2) Just Discord.
+3) Just Twitter.
+4) Discord, Reddit and Twitter.
+
+Uniswap V3 Core White Paper
+1) Is from march 2021, has five authors and nine pages.
+2) Is from february 2020, has four authors and seven pages.
+3) Is from July 2020, has six authors and eight pages.
+4) Is from march 2021, has 1 author, and five pages.
