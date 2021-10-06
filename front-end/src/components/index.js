@@ -2,7 +2,7 @@ import React from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './navBarElements'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import OnboardingButton from './metamask'
-import StartCampaign from './startCampaign';
+import StartCampaign from './UserForm';
 import logo from './logoNav.jpg';
 //rafce + enter creates a template
 

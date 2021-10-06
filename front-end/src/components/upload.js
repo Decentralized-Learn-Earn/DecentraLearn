@@ -7,7 +7,7 @@ const apiKey = "zF6evcGXpvKSXmNEJfvY0Q==";
 const apiSecret = "1CxiW7T9ECqgl7tPTS+LPmSTuay069sBHg6WKxmGFr4=";
 
 
-const uploadContent = async (data) => {
+export async function UploadContent(data) {
     const date = new Date();
     const timestamp = date.getTime();
 
@@ -30,6 +30,9 @@ const filePath = ('/Users/tomterrific/ethGlobal/LearnEarn/README.md');
 
 const readFile = (filePath, (err, data) => {
   if(!err) {
-    uploadContent(data);
+    UploadContent(data);
   }
 })
+
+
+export default UploadContent

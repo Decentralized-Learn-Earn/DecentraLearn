@@ -5,7 +5,7 @@ import './App.css';
 import Navbar from './components';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './components/metamask';
-const {onSubmit, onChange, form, error, default: StartCampaign} = require('./components/startCampaign')
+const {default: UserForm} = require('./components/UserForm')
 
 
 
@@ -19,7 +19,7 @@ function App() {
     <div className="Navbar">
       <Router>
       <Navbar />
-      <Route path="/startcampaign" component={StartCampaign} />
+      <Route path="/startcampaign" component={UserForm} />
     </Router>
 
     <div className="Campaigns">

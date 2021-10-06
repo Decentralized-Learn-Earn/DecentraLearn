@@ -4,7 +4,7 @@ const ipfs = create("https://ipfs.infura.io:5001");
 
 //const ipfs = require("nano-ipfs-store").at("https://ipfs.infura.io:5001");
 
-(async () => {
+async function Answers()  {
 
   const doc = JSON.stringify({
     foo: "barrr",
@@ -17,4 +17,8 @@ const ipfs = create("https://ipfs.infura.io:5001");
   
   console.log(await ipfs.cat(cid));
 
-})();
+
+}
+
+export default Answers
+
