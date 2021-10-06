@@ -35,8 +35,8 @@ export function IpfsUpload() {
     
     <div className="App">
       <TextField
-      placeholder="Type Answer"
-      label="Input Answers in Order"
+      placeholder="Type Question Here"
+      label="Create Question"
         onChange={onChange}
         margin="normal"
         fullWidth

@@ -37,13 +37,7 @@ export class FormUserDetails extends Component {
              />
             
             <br />
-            <Answers
-              
-              onChange={handleChange('answers')}
-              defaultValue={values.answers}
-              margin="normal"
-              fullWidth
-            />
+            
             <br />
             <Answers
               placeholder="Type Answer"
@@ -61,20 +55,8 @@ export class FormUserDetails extends Component {
               margin="normal"
               fullWidth
             />
-            <Answers
-              placeholder="Type Answer"
-              label="Question 4 Answer"
-              onChange={handleChange('answers')}
-              defaultValue={values.answers}
-              margin="normal"
-              fullWidth
-            />
-            <Answers
-              
-              onChange={handleChange('answers')}
-              defaultValue={values.answers}
-              
-            />
+           
+            
             
             <br />
             
