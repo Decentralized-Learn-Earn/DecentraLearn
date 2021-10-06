@@ -1,0 +1,21 @@
+.campaign {
+  background-color: #eee;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.campaign label {
+  margin: 0 5px;
+}
+
+.campaign .actions {
+  display: flex;
+  justify-content: center;
+}
+
+.campaign .actions > div {
+  margin: 5px;
+}
