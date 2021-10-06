@@ -1,4 +1,5 @@
 const hre = require("hardhat");
+const fs = require('fs');
 
 
 async function main() {
@@ -31,6 +32,8 @@ async function main() {
   console.log("DecentraLearn deployed to:", contract.address);
   console.log("ShivaliToken deployed to:", token.address);
   console.log("DanielToken deployed to:", token2.address);
+  const config = { address: contract.address }
+  fs.writeFileSync("./app/__config.json", JSON.stringify(config, null, 2));
 }
 
 // We recommend this pattern to be able to use async/await everywhere
