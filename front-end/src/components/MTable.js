@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     tableContainer: {
         borderRadius: 15,
         margin: '10px 10px',
-        maxWidth: 700
+        maxWidth: 720
     },
     tableHeaderCell: {
         fontWeight: 'bold',
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 let USERS = [], STATUSES = ['Active'];
-for(let i=0;i<14;i++) {
+for(let i=0;i<4;i++) {
     USERS[i] = {
       
         name: "",

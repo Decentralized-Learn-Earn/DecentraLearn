@@ -7,9 +7,9 @@ const Start = ({ onQuizStart }) => {
     <div className="card">
       <div className="card-content">
         <div className="content">
-          <h1>Start the quiz</h1>
-          <p>Good luck!</p>
-          <Button color="primary" variant="contained" className="button is-info is-medium" onClick={onQuizStart}>Start</Button>
+          <p>Uniswap is a decentralized finance protocol that is used to exchange cryptocurrencies. Uniswap is also the name of the company that initially built the Uniswap protocol. The protocol facilitates automated transactions between cryptocurrency tokens on the Ethereum blockchain through the use of smart contracts </p>
+          
+          <Button color="primary" variant="contained" className="button is-info is-medium" onClick={onQuizStart}>Start Quiz</Button>
         </div>
       </div>
     </div>

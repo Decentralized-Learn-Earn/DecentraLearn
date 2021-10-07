@@ -12,6 +12,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .logo2 {
     padding-top: 0%;
+    background-color:cornsilk;
     
   }
 }
@@ -27,15 +28,16 @@ html,
 body,
 #root {
   height: 100%;
+  background-color:cornsilk;
 }
 
 .Quiz {
   position: absolute;
-  right: 0px;
+  right: 50px;
   width: 400px;
   border: 3px solid rgb(57, 57, 224);
   padding: 10px;
-  height: 100%;
+  height: 70%;
   background-color:cornsilk;
 }
 
@@ -54,15 +56,18 @@ label.radio {
   margin-bottom: 5px;
   font-size: 20px;
   align-items: right;
+  background-color:cornsilk;
   
 }
 
 label.radio+.radio {
   margin-left: 0;
+  background-color:cornsilk;
 }
 
 label.radio input {
   margin-right: 10px;
+  background-color:cornsilk;
 }
 
 
