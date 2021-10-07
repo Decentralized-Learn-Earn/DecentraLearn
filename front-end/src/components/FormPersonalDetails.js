@@ -26,10 +26,10 @@ export class FormPersonalDetails extends Component {
             fullWidth
             maxWidth='sm'
           >
-            <AppBar title="Enter Token Amount" />
+            <AppBar title="Enter Website" />
             <TextField
-              placeholder="Enter Token Amount"
-              label="Enter Amount you Wish to Deposit"
+              placeholder="(optional)"
+              label="Enter Website"
               onChange={handleChange('tokenAmount')}
               defaultValue={values.tokenAmount}
               margin="normal"

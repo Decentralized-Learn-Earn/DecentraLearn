@@ -1,18 +1,18 @@
 .Navbar {
   text-align: center;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .logo2 {
     padding-top: 0%;
-    background-color:cornsilk;
+    background-color:whitesmoke;
     
   }
 }
@@ -20,7 +20,7 @@
 
 .Campaigns {
   align-items: left;
-  background-color:cornsilk;
+  background-color:whitesmoke;
   padding-top: 0%;
   display: 'inline-block'
 }
@@ -28,7 +28,7 @@ html,
 body,
 #root {
   height: 100%;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 .Quiz {
@@ -38,7 +38,7 @@ body,
   border: 3px solid rgb(57, 57, 224);
   padding: 10px;
   height: 70%;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 .Quiz .card {
@@ -46,7 +46,7 @@ body,
   width: 100%;
   text-align: center;
   align-items: right;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 label.radio {
@@ -56,18 +56,18 @@ label.radio {
   margin-bottom: 5px;
   font-size: 20px;
   align-items: right;
-  background-color:cornsilk;
+  background-color:whitesmoke;
   
 }
 
 label.radio+.radio {
   margin-left: 0;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 label.radio input {
   margin-right: 10px;
-  background-color:cornsilk;
+  background-color:whitesmoke;
 }
 
 
