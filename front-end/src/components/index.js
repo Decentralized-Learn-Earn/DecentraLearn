@@ -12,7 +12,7 @@ const Navbar = () => {
         <>
         <Nav>
             <NavLink to="/" >
-            <img src={logo} alt="HTML5 Icon" width="100" height="60"></img>
+            <img src={logo} alt="HTML5 Icon" width="130" height="90"></img>
             </NavLink>
             <Bars />
             <NavMenu> 
