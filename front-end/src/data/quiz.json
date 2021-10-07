@@ -18,8 +18,8 @@
       },
       {
         "question": "Uniswap V3 Core White Paper",
-        "choices": ["Is from March 2021, has five authors and nine pages.", "Is from February 2020, has four authors and seven pages.", "Is from July 2020, has six authors and eight pages.", "Is from March 2021, has 1 author, and five pages."],
-        "answer": "Is from February 2020, has four authors and seven pages."
+        "choices": ["Was written in March 2021, has five authors and nine pages.", "Is from February 2020, has four authors and seven pages.", "Is from July 2020, has six authors and eight pages.", "Is from March 2021, has 1 author, and five pages."],
+        "answer": "Was written in March 2021, has five authors and nine pages."
       }
     ]
   }
