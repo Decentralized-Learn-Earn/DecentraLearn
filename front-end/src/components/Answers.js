@@ -37,7 +37,7 @@ export function IpfsUpload() {
       <TextField
       placeholder="Type Question Here"
       label="Create Question"
-        onChange={onChange}
+        onClick={onChange}
         margin="normal"
         fullWidth
       />

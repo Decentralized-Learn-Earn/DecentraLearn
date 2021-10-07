@@ -59,7 +59,7 @@ export class Confirm extends Component {
               color="primary"
               variant="contained"
               onClick={this.continue}
-            >Confirm & Continue</Button>
+            >Confirm & Create Campaign</Button>
           </Dialog>
         </>
       </MuiThemeProvider>

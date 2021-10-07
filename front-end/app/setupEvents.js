@@ -4,9 +4,10 @@ import Decentralearn from './artifacts/contracts/Decentralearn.sol/Decentralearn
 import {address} from './__config';
 import {ethers} from 'ethers';
 
+const url = "https://eth-kovan.alchemyapi.io/v2/KzzLGcuM4BIAvxpd2vEb8T3MDM3pT2t7"
 export default async function setupEvents() {
-  const provider = new ethers.providers.Web3Provider(ethereum);
-  await ethereum.request({ method: 'eth_requestAccounts' });
+  const provider = new ethers.providers.Web3Provider(url);
+  await window.ethereum.request({ method: 'eth_requestAccounts' });
 
   const signer = provider.getSigner();
   const contract = new ethers.Contract(address, Decentralearn.abi, signer);
@@ -21,6 +22,6 @@ export default async function setupEvents() {
   }
 }
 
-ethereum.on('chainChanged', () => {
+window.ethereum.on('chainChanged', () => {
   setupEvents();
 });

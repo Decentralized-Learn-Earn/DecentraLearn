@@ -32,6 +32,23 @@ export class FormUserDetails extends Component {
               margin="normal"
               fullWidth
             />
+            <TextField
+              placeholder="Enter Amount you Wish to Deposit"
+              label="Enter Token Amount"
+              onChange={handleChange('tokenAmount')}
+              defaultValue={values.tokenAmount}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <TextField
+              placeholder="Choose Amount you Wish to pay per user"
+              label="User Payout"
+              onChange={handleChange('tokenAmount')}
+              defaultValue={values.tokenAmount}
+              margin="normal"
+              fullWidth
+            />
             <IpfsUpload title="Enter Campaign Content/Questions"
             onChange={handleChange('campaignContent')}
              />
@@ -39,22 +56,7 @@ export class FormUserDetails extends Component {
             <br />
             
             <br />
-            <Answers
-              placeholder="Type Answer"
-              label="Question 2 Answer"
-              onChange={handleChange('answers')}
-              defaultValue={values.answers}
-              margin="normal"
-              fullWidth
-            />
-            <Answers
-              placeholder="Type Answer"
-              label="Question 3 Answer"
-              onChange={handleChange('answers')}
-              defaultValue={values.answers}
-              margin="normal"
-              fullWidth
-            />
+            
            
             
             

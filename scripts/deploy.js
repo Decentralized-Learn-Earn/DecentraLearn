@@ -1,5 +1,6 @@
 const hre = require("hardhat");
 const fs = require('fs');
+const ethernal = require('hardhat-ethernal');
 
 
 async function main() {
@@ -21,19 +22,19 @@ async function main() {
     await token2.deployed();
 
 //*Use below to deploy with ethernal*
-  //await hre.ethernal.push({
- // name: 'Decentralearn',
- // address: contract.address,
+  await hre.ethernal.push({
+  name: 'Decentralearn',
+  address: contract.address,
   
-//});
+});
   //*remove comments and comment out ethernal to deploy without ethernal*
- // await contract.deployed();
+ //await contract.deployed();
 
   console.log("DecentraLearn deployed to:", contract.address);
   console.log("ShivaliToken deployed to:", token.address);
   console.log("DanielToken deployed to:", token2.address);
   const config = { address: contract.address }
-  fs.writeFileSync("./app/__config.json", JSON.stringify(config, null, 2));
+  //fs.writeFileSync("./app/__config.json", JSON.stringify(config, null, 2));
 }
 
 // We recommend this pattern to be able to use async/await everywhere

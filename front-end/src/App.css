@@ -1,10 +1,12 @@
 .Navbar {
   text-align: center;
+  background-color:cornsilk;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  background-color:cornsilk;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,8 +19,50 @@
 
 .Campaigns {
   align-items: left;
-  background-color:white;
+  background-color:cornsilk;
   padding-top: 0%;
+  display: 'inline-block'
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.Quiz {
+  position: absolute;
+  right: 0px;
+  width: 400px;
+  border: 3px solid rgb(57, 57, 224);
+  padding: 10px;
+  height: 100%;
+  background-color:cornsilk;
+}
+
+.Quiz .card {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  align-items: right;
+  background-color:cornsilk;
+}
+
+label.radio {
+  display: block;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  align-items: right;
+  
+}
+
+label.radio+.radio {
+  margin-left: 0;
+}
+
+label.radio input {
+  margin-right: 10px;
 }
 
 

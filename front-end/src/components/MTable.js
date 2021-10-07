@@ -1,6 +1,10 @@
 import faker from 'faker';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import {Quiz} from './Quiz';
+import '../App'
 import { 
     Table,
     TableBody,
@@ -9,12 +13,13 @@ import {
     TableHead,
     TableRow,
     Paper,
-    Avatar,
     Grid,
     Typography,
     TablePagination,
-    TableFooter
+    TableFooter,
+    IconButton
  } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
     table: {
@@ -49,10 +54,11 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-let USERS = [], STATUSES = ['Active', 'Complete'];
-for(let i=0;i<2;i++) {
+let USERS = [], STATUSES = ['Active'];
+for(let i=0;i<14;i++) {
     USERS[i] = {
-        name: "Uniswap",
+      
+        name: "",
         email: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
         phone: "https://uniswap.org/",
         
@@ -78,6 +84,7 @@ function MTable() {
   };
 
   return (
+    <Router>
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -98,8 +105,21 @@ function MTable() {
                           
                       </Grid>
                       <Grid item lg={10}>
+                       
+                      
+                
                         
-                          <Typography className={classes.name}>{row.name}</Typography>
+                          
+                          
+                      
+                      
+                     
+                      <Button
+              color="primary"
+              variant="contained"
+              onClick={Quiz}
+            >UniSwap</Button>
+                            
                           <Typography color="textSecondary" variant="body2">{row.email}</Typography>
                           <Typography color="textSecondary" variant="body2">{row.phone}</Typography>
                       </Grid>
@@ -133,6 +153,7 @@ function MTable() {
         </TableFooter>
       </Table>
     </TableContainer>
+    </Router>
   );
 }
 

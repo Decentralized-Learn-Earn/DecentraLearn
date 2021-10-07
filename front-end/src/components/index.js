@@ -20,9 +20,10 @@ const Navbar = () => {
                     About
                 </NavLink>
                 <NavLink to="/startcampaign" activeStyle>
-                    Start Campaign
+                    Create Campaign
                     
                 </NavLink>
+                
                 <NavLink to="/Donate" activeStyle>
                     Donate
                 </NavLink>
