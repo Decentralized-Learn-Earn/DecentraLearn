@@ -7,12 +7,14 @@
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.4.7",
-    "hardhat": "^2.6.4"
+    "hardhat": "^2.6.4",
+    "parcel": "^2.0.0-rc.0"
   },
   "dependencies": {
     "@chainlink/contracts": "^0.2.2",
     "@openzeppelin/contracts": "^4.3.2",
     "dotenv": "^10.0.0",
+    "hardhat-ethernal": "^0.3.10",
     "styled-components": "^5.3.1",
     "web3": "^1.6.0",
     "web3-eth": "^1.5.3"

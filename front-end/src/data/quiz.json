@@ -1,0 +1,25 @@
+{
+    "data": [
+     
+      {
+        "question": "Uniswap is a..",
+        "choices": ["NFT portal that began at 2018 with the renowned success of the unicorn series. Is still the only one in the market that allows direct exchange of nft among the users.", "An NFT portal decentralized.", "A decentralized exchange.", "A traditional centralized cryptocurrency exchange."],
+        "answer": "A decentralized exchange."
+      },
+      {
+        "question": "Uni token..",
+        "choices": ["Is a project that will be delivered in 2022.", "Is the native Uniswap token and gives their holders vote in Uniswap governance.", "Is a third party token that was launched through Uniswap in 2019.", "All previous statements are false."],
+        "answer": "Is the native Uniswap token and gives their holders vote in Uniswap governance."
+      },
+      {
+        "question": "At Uniswap page, there is direct access to which these Uniswap communities.",
+        "choices": ["Facebook.", "Discord.", "Twitter.", "Discord, Reddit and Twitter."],
+        "answer": "Discord, Reddit and Twitter."
+      },
+      {
+        "question": "Uniswap V3 Core White Paper",
+        "choices": ["Was written in March 2021, has five authors and nine pages.", "Is from February 2020, has four authors and seven pages.", "Is from July 2020, has six authors and eight pages.", "Is from March 2021, has 1 author, and five pages."],
+        "answer": "Was written in March 2021, has five authors and nine pages."
+      }
+    ]
+  }

@@ -1,11 +1,15 @@
 import logo from './logo5.jpg';
-
+import MTable from './components/MTable'
 import React from 'react';
 import './App.css';
 import Navbar from './components';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './components/metamask';
-const {onSubmit, onChange, form, error, default: StartCampaign} = require('./components/startCampaign')
+import './components/Quiz';
+import Quiz from './components/Quiz';
+import { NavLink } from './components/navBarElements';
+
+const {default: UserForm} = require('./components/UserForm')
 
 
 
@@ -15,24 +19,30 @@ function App() {
   
 
   return (
-    
+    <Router>
     <div className="Navbar">
-      <Router>
+      
       <Navbar />
-      <Route path="/startcampaign" component={StartCampaign} />
-    </Router>
+      <Switch>
+      <Route path="/startcampaign" component={UserForm} />
+     
+      </Switch>
 
-    <div className="Wallet-connect">
+    <div className="Campaigns">
+ 
+    <Quiz/>
+    <MTable/>
+    
+    </div>
+     
+      
+    
+    
+      
+      
       
     </div>
-      
-      <header className="App-header">
-        
-        <img src={logo} alt="HTML5 Icon" width="550" height="400"></img>
-        
-       
-      </header>
-    </div>
+    </Router>
   );
 }
 

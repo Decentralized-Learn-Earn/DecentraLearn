@@ -1,4 +1,4 @@
-# What is Decentralized Learn & Earn
+# What is DecentraLearn
 Only decentralized, permission-less application on the Ethereum network to broadcast educational information about any token and get people incentivized while learning about it.
 No identity or photo identification required unlike other centralized platforms.
 Anyone can put educational information with no restrictions.

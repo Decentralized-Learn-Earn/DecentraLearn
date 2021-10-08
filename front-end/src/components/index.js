@@ -2,7 +2,8 @@ import React from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './navBarElements'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import OnboardingButton from './metamask'
-import StartCampaign from './startCampaign';
+import StartCampaign from './UserForm';
+import logo from './logoNav.jpg';
 //rafce + enter creates a template
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
         <>
         <Nav>
             <NavLink to="/" >
-                <img src="" alt=""/>
+            <img src={logo} alt="HTML5 Icon" width="130" height="90"></img>
             </NavLink>
             <Bars />
             <NavMenu> 
@@ -19,9 +20,10 @@ const Navbar = () => {
                     About
                 </NavLink>
                 <NavLink to="/startcampaign" activeStyle>
-                    Start Campaign
+                    Create Campaign
                     
                 </NavLink>
+                
                 <NavLink to="/Donate" activeStyle>
                     Donate
                 </NavLink>
