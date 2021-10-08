@@ -8,9 +8,9 @@ import "../front-end/app/index.css";
 const contractAddress = "0xb7Fc4930206472f1727F12415eBDb1fa4b9aFB1f";
 //const contractAddress = process.env.CONTRACT_ADDRESS
 const contractABI = ContractArtifact.abi;
-setupEvents();
+//setupEvents();
 
-async function newCampaign() {
+export default async function newCampaign() {
   const provider = new ethers.providers.Web3Provider(ethereum);
   await ethereum.request({ method: 'eth_requestAccounts' });
 
@@ -20,4 +20,5 @@ async function newCampaign() {
   let cID = "QmV46tyKPs6qRnpDWYV9Dxd99CWPCcqw2oYsTGmYJ1nG12";
   await contract.connect(signer).createCampaign(tokenAddress, ethers.utils.parseEther('5000'), 10, cID); 
 }
-document.getElementById("deploy").addEventListener("click", newCampaign);
+//document.getElementById("deploy").addEventListener("click", newCampaign);
+ 

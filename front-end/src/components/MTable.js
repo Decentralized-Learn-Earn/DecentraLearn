@@ -1,10 +1,10 @@
 import faker from 'faker';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import {Quiz} from './Quiz';
+import { Link } from 'react-router-dom';
 import '../App'
+
 import { 
     Table,
     TableBody,
@@ -19,6 +19,7 @@ import {
     TableFooter,
     IconButton
  } from '@material-ui/core';
+ const Quiz = require('./Quiz');
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,10 +58,16 @@ const useStyles = makeStyles((theme) => ({
   }));
   
 
+
+    
   
 
   const uniSwap = {
-    name: <button>UniSwap</button>,
+    name:  <Link to="/uniswapbutton">
+    <button type="button">
+         UniSwap
+    </button>
+</Link>,
     email: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
     phone: "https://uniswap.org/",
     joinDate: faker.date.past().toLocaleDateString('en-US'),
@@ -68,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     
   }
   const aave = {
-    name: <button>Aave</button>,
+    name: <button> Aave</button>,
     email: "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
     phone: "https://aave.com/",
     joinDate: faker.date.past().toLocaleDateString('en-US'),
@@ -117,7 +124,7 @@ function MTable() {
   };
 
   return (
-    <Router>
+    
       
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
@@ -131,7 +138,8 @@ function MTable() {
         </TableHead>
         <TableBody>
           {USERS.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-            <TableRow key={row.name, row.name1}>
+            
+            <TableRow key={row.name}>
               <TableCell>
                   <Grid container>
                       <Grid item lg={2}>
@@ -183,7 +191,7 @@ function MTable() {
         </TableFooter>
       </Table>
     </TableContainer>
-    </Router>
+   
   );
 }
 

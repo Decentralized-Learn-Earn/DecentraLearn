@@ -3,14 +3,14 @@ import MTable from './components/MTable'
 import React from 'react';
 import './App.css';
 import Navbar from './components';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import './components/metamask';
-import './components/Quiz';
-import Quiz from './components/Quiz';
-import { NavLink } from './components/navBarElements';
+
+
+
 
 const {default: UserForm} = require('./components/UserForm')
-
+const {default: Quiz} = require('./components/Quiz')
 
 
 
@@ -29,8 +29,8 @@ function App() {
       </Switch>
 
     <div className="Campaigns">
- 
-    <Quiz/>
+    
+    <Route path="/uniswapbutton" component={Quiz} />
     <MTable/>
     
     </div>

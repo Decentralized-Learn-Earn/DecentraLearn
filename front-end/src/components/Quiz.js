@@ -11,7 +11,7 @@ import quizData from '../data/quiz.json';
 import App from '../App';
 let interval;
 
-export const Quiz = () => {
+export function Quiz()  {
   const [step, setStep] = useState(1);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -40,6 +40,7 @@ export const Quiz = () => {
       setTime(prevTime => prevTime + 1);
     }, 1000);
   }
+
 
   return (
     <div className="Quiz">
