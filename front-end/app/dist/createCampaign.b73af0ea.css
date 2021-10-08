@@ -1,0 +1,60 @@
+body {
+    background-color: #eee;
+    display: flex;
+    font-family: 'Muli', sans-serif;
+  }
+  
+  .contract-interface, .existing-transactions {
+    margin: 20px;
+    width: 50%;
+    padding: 40px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  h1 {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: #aaa;
+    margin: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 6px;
+    font-size: 18px;
+  }
+  
+  .button {
+    background-color: #f58427;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px;
+    padding: 9px 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  
+  .existing-proposal ul {
+    padding: 10px;
+    margin: 20px;
+    background-color: #eee;
+  }
+  
+  .existing-proposal ul > li {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+  }
+  
+
+/*# sourceMappingURL=/createCampaign.b73af0ea.css.map */
