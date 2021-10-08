@@ -85,15 +85,15 @@ const useStyles = makeStyles((theme) => ({
   }
   const compound = {
     name: <button>Compound</button>,
-    email: "0xc00e94cb662c3520282e6f5717214004a7f26888",
+    email: "0x673ad3A7b95490934AdA8D999FF9B03C74ED2cDB",
     phone: "https://compound.finance/",
     joinDate: faker.date.past().toLocaleDateString('en-US'),
     status: "Active"
     
   }
 
-  const danielToken = {
-    name: <button>Daniel Token</button>,
+  const dleToken = {
+    name: <button>Decentralearn</button>,
     email: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
     phone: "decentralearn.eth",
     joinDate: faker.date.past().toLocaleDateString('en-US'),
@@ -101,9 +101,9 @@ const useStyles = makeStyles((theme) => ({
     
   }
 
-  let USERS = [aave, compound, uniSwap, danielToken], STATUSES = ['Active'];
+  let USERS = [aave, compound, uniSwap, dleToken], STATUSES = ['Active'];
 for(let i=0;i<4;i++) {
-    USERS[aave, uniSwap, compound] = {
+    USERS[aave, uniSwap, compound, dleToken] = {
       
         
     }
