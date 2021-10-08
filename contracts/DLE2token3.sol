@@ -9,8 +9,8 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  * @title Decentralized Learn & Earn DApp
  * @author Shivali, Daniel, Dilan @ EthOnline Sep-Oct, 2021 
  **/
-contract Danieltoken is ERC20 {
-constructor(uint256 initialSupply) ERC20("Spain", "SPN") {
+contract DLE2token3 is ERC20 {
+constructor(uint256 initialSupply) ERC20("DLE3", "DLE3") {
         _mint(msg.sender, initialSupply);
     }
 
