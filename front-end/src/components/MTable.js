@@ -52,19 +52,52 @@ const useStyles = makeStyles((theme) => ({
         padding: '3px 10px',
         display: 'inline-block'
     }
+    
+    
   }));
-
-let USERS = [], STATUSES = ['Active'];
-for(let i=0;i<4;i++) {
-    USERS[i] = {
-      
-        name: "",
-        email: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
-        phone: "https://uniswap.org/",
-        
   
-        joinDate: faker.date.past().toLocaleDateString('en-US'),
-        status: STATUSES[Math.floor(Math.random() * STATUSES.length)]
+
+  
+
+  const uniSwap = {
+    name: <button>UniSwap</button>,
+    email: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+    phone: "https://uniswap.org/",
+    joinDate: faker.date.past().toLocaleDateString('en-US'),
+    status: "Active"
+    
+  }
+  const aave = {
+    name: <button>Aave</button>,
+    email: "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+    phone: "https://aave.com/",
+    joinDate: faker.date.past().toLocaleDateString('en-US'),
+    status: "Active"
+    
+    
+  }
+  const compound = {
+    name: <button>Compound</button>,
+    email: "0xc00e94cb662c3520282e6f5717214004a7f26888",
+    phone: "https://compound.finance/",
+    joinDate: faker.date.past().toLocaleDateString('en-US'),
+    status: "Active"
+    
+  }
+
+  const danielToken = {
+    name: <button>Daniel Token</button>,
+    email: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    phone: "decentralearn.eth",
+    joinDate: faker.date.past().toLocaleDateString('en-US'),
+    status: "Active"
+    
+  }
+
+  let USERS = [aave, compound, uniSwap, danielToken], STATUSES = ['Active'];
+for(let i=0;i<4;i++) {
+    USERS[aave, uniSwap, compound] = {
+      
         
     }
 }
@@ -85,6 +118,7 @@ function MTable() {
 
   return (
     <Router>
+      
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -114,12 +148,8 @@ function MTable() {
                       
                       
                      
-                      <Button
-              color="primary"
-              variant="contained"
-              onClick={Quiz}
-            >UniSwap</Button>
-                            
+                      
+                            <Typography className={classes.name}>{row.name}</Typography>
                           <Typography color="textSecondary" variant="body2">{row.email}</Typography>
                           <Typography color="textSecondary" variant="body2">{row.phone}</Typography>
                       </Grid>

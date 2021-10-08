@@ -7,6 +7,9 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import Button from '@material-ui/core/Button';
 
+
+
+
 export class Confirm extends Component {
   continue = e => {
     e.preventDefault();
@@ -18,6 +21,8 @@ export class Confirm extends Component {
     e.preventDefault();
     this.props.prevStep();
   };
+
+  
 
   render() {
     const {
