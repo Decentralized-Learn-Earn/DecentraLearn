@@ -16,8 +16,8 @@ const Navbar = () => {
             </NavLink>
             <Bars />
             <NavMenu> 
-                <NavLink to="/about" activeStyle>
-                    About
+                <NavLink to="/github" activeStyle>
+                    GitHub
                 </NavLink>
                 <NavLink to="/startcampaign" activeStyle>
                     Create Campaign

@@ -65,7 +65,7 @@ function UserForm() {
       <a href={"https://ipfs.io/ipfs/QmX6K8UB2V1TVjPzkb4JMU6HSxyKdLuW3zzgtrwUKEckGH"}>Fill out Template</a>
       <br/>
       <br/>
-      <a href={"https://ipfs.io/ipfs/QmRyDQBHrMwGKgzrjGJUZTWEJqbzsBqZPWVjydrYZivH8R"}>Example Template</a>
+      <a href={"https://ipfs.io/ipfs/QmRyDQBHrMwGKgzrjGJUZTWEJqbzsBqZPWVjydrYZivH8R"}>Sample Template</a>
       
       <br/>
             <TextField
@@ -78,7 +78,7 @@ function UserForm() {
             <br />
             <TextField
               placeholder="Enter Amount"
-              label="Deposit Tokens"
+              label="Total Token Amount"
 
               margin="normal"
               halfWidth

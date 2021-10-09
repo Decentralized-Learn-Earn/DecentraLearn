@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <Switch>
       
-     
+      
       </Switch>
 
     <div className="Campaigns">
