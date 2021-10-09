@@ -1,18 +1,18 @@
 .Navbar {
   text-align: center;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .logo2 {
     padding-top: 0%;
-    background-color:rgb(95, 93, 93);
+    background-color:whitesmoke;
     
   }
 }
@@ -46,7 +46,7 @@ button:hover {
 
 .Campaigns {
   align-items: left;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
   padding-top: 0%;
   display: 'inline-block'
 }
@@ -54,20 +54,20 @@ html,
 body,
 #root {
   height: 100%;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 .Form {
   position: absolute;
   right: 50px;
   width: 400px;
-  border: 3px solid rgb(57, 57, 224);
+  border: 3px solid rgb(148, 59, 221);
   padding: 10px;
   height: 80%;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 a {
-color:white; 
+color:rgb(174, 129, 233); 
 align-items: center;
 padding: 0 1rem;
 height: 100%;
@@ -84,7 +84,7 @@ text-decoration: none;
   border: 3px solid rgb(57, 57, 224);
   padding: 10px;
   height: 70%;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 
@@ -94,7 +94,7 @@ text-decoration: none;
   width: 100%;
   text-align: center;
   align-items: right;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 label.radio {
@@ -104,18 +104,18 @@ label.radio {
   margin-bottom: 5px;
   font-size: 20px;
   align-items: right;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
   
 }
 
 label.radio+.radio {
   margin-left: 0;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 label.radio input {
   margin-right: 10px;
-  background-color:rgb(95, 93, 93);
+  background-color:whitesmoke;
 }
 
 
