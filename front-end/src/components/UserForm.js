@@ -62,11 +62,15 @@ function UserForm() {
     <div className="Form">
       
       <h1>Complete Form to Create Campaign</h1>
-      <a href={"https://ipfs.io/ipfs/QmXT6jn5V8sDN47vpgP3MRkihWuTN8o3VpN5XtpiJAd1kR"}>Download and Fill out</a>
+      <a href={"https://ipfs.io/ipfs/QmX6K8UB2V1TVjPzkb4JMU6HSxyKdLuW3zzgtrwUKEckGH"}>Fill out Template</a>
+      <br/>
+      <br/>
+      <a href={"https://ipfs.io/ipfs/QmRyDQBHrMwGKgzrjGJUZTWEJqbzsBqZPWVjydrYZivH8R"}>Example Template</a>
+      
       <br/>
             <TextField
-              placeholder="Enter Contract Address"
-              label="Contract Address"
+              placeholder="Enter Address"
+              label="ERC20 Token Address"
 
               margin="normal"
               halfWidth
@@ -87,14 +91,7 @@ function UserForm() {
               margin="normal"
               halfWidth
             />
-            <br/>
-            <TextField
-              placeholder="Campaign Website"
-              label="Enter Website"
-
-              margin="normal"
-              halfWidth
-            />
+           
             <br/>
             <br/>
             
@@ -105,7 +102,7 @@ function UserForm() {
         <Button type="submit">Submit</Button>
       </Form>
       <h6>IPFS Hash: {hash}</h6>
-      <p>Link: https://ipfs.io/ipfs/{hash}</p>
+      
       
       
     </div>
