@@ -16,7 +16,7 @@ export const NavLink = styled(Link)`
 color: #fff;
 display: flex;
 align-items: center;
-tet-decoration: none;
+text-decoration: none;
 padding: 0 1rem;
 height: 100%
 cursor: pointer;
@@ -26,6 +26,7 @@ cursor: pointer;
 
 }
 `
+
 
 export const Bars = styled(FaBars)`
 display: none;

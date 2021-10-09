@@ -1,9 +1,11 @@
 import React from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './navBarElements'
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import OnboardingButton from './metamask'
 import StartCampaign from './UserForm';
 import logo from './logoNav.jpg';
+import '../../src/App.css'
+
 //rafce + enter creates a template
 
 const Navbar = () => {
@@ -16,12 +18,12 @@ const Navbar = () => {
             </NavLink>
             <Bars />
             <NavMenu> 
-                <NavLink to="/github" activeStyle>
-                    GitHub
-                </NavLink>
+                <div>
+                <a href="https://github.com/Decentralized-Learn-Earn/DecentraLearn">GitHub</a>
+                </div>
+               
                 <NavLink to="/startcampaign" activeStyle>
-                    Create Campaign
-                    
+                    Create Campaign 
                 </NavLink>
                 
                 <NavLink to="/Donate" activeStyle>
