@@ -24,13 +24,15 @@ function App() {
       
       <Navbar />
       <Switch>
-      <Route path="/startcampaign" component={UserForm} />
+      
      
       </Switch>
 
     <div className="Campaigns">
-    
+    <Switch>
     <Route path="/uniswapbutton" component={Quiz} />
+    <Route path="/startcampaign" component={UserForm} />
+    </Switch>
     <MTable/>
     
     </div>

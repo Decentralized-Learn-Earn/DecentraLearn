@@ -5,7 +5,7 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import IpfsUpload from './ipfsUpload';
-import Answers from './Answers'
+
 
 export class FormUserDetails extends Component {
   continue = e => {

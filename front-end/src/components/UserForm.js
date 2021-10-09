@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { Button, Form } from 'react-bootstrap';
+import '../../src/App.css'
 
 
 const IPFS = require('ipfs-api');
@@ -57,12 +58,14 @@ function UserForm() {
     
     
   return (
-    <div>
+  
+    <div className="Form">
       
       <h1>Complete Form to Create Campaign</h1>
-
-      <TextField
-              placeholder="Enter the ERC-20 Contract Address"
+      <a href={"https://ipfs.io/ipfs/QmXT6jn5V8sDN47vpgP3MRkihWuTN8o3VpN5XtpiJAd1kR"}>Download an Fill out</a>
+      <br/>
+            <TextField
+              placeholder="Enter Contract Address"
               label="Contract Address"
 
               margin="normal"
@@ -70,7 +73,7 @@ function UserForm() {
             />
             <br />
             <TextField
-              placeholder="Enter the amount you wish to deposit"
+              placeholder="Enter Amount"
               label="Deposit Tokens"
 
               margin="normal"
@@ -78,8 +81,16 @@ function UserForm() {
             />
             <br />
             <TextField
-              placeholder="Choose amount to payout user upon completion of campaign"
+              placeholder="Choose Amount"
               label="Payout per User"
+
+              margin="normal"
+              halfWidth
+            />
+            <br/>
+            <TextField
+              placeholder="Campaign Website"
+              label="Enter Website"
 
               margin="normal"
               halfWidth
@@ -95,7 +106,7 @@ function UserForm() {
       </Form>
       <h6>IPFS Hash: {hash}</h6>
       <p>Link: https://ipfs.io/ipfs/{hash}</p>
-      <a href={"https://ipfs.io/ipfs/" + hash}>Click to Download</a>
+      
       
     </div>
   );
