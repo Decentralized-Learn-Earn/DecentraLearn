@@ -62,7 +62,7 @@ function UserForm() {
     <div className="Form">
       
       <h1>Complete Form to Create Campaign</h1>
-      <a href={"https://ipfs.io/ipfs/QmXT6jn5V8sDN47vpgP3MRkihWuTN8o3VpN5XtpiJAd1kR"}>Download an Fill out</a>
+      <a href={"https://ipfs.io/ipfs/QmXT6jn5V8sDN47vpgP3MRkihWuTN8o3VpN5XtpiJAd1kR"}>Download and Fill out</a>
       <br/>
             <TextField
               placeholder="Enter Contract Address"
