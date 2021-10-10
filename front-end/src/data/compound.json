@@ -1,0 +1,31 @@
+{
+    "data": [
+
+      {
+        "question": "What is Compound?",
+        "choices": ["An online portal that explains in detail how does compound interest works.", "A portal where people can borrow asssets from many banks.",
+                    "A portal where people can deposit assets on many banks.",
+                    "A portal where people can BOTH deposit AND borrow assets on many banks."],
+        "answer": "An open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets."
+      },
+      {
+        "question": "Governance decisions in Compound...",
+        "choices": ["Are taken by the capitalists that invested in Compound when it was created.",
+                    "Are taken by a Dao, one person that has Compound token, one vote independently of the amount",
+                    "Are taken by a CEO that is hired with that purpose."],
+        "answer": "Are taken by a Dao, one Compound token one vote."
+      },
+      {
+        "question": "As 1 october 2021...",
+        "choices": ["Compound token is among the first 10 coins and has a market capitalization of around 1800M u$S.",
+                    "compound token is among the first 25 coins and has a market capitalization of around 1800M u$S."
+                    "Compound token is not among the first 100 coins and has a market capitalization of around 1800M u$S."],
+        "answer": "Compound token is among the first 100 coins and has a market capitalization of around 1800M u$S."
+      },
+      {
+        "question": "The Compound Protocol is currently deployed on the following networks:",
+        "choices": ["Ethereum Mainnet and Rinkeby.","Ethereum Mainnet, Rinkeby and Matic Mainnet.","Is not deployed yet."],
+        "answer": "Ethereum Mainnet, Rinkeby, Kovan, Ropsten and Goerli."
+      }
+    ]
+  }

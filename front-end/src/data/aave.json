@@ -1,0 +1,31 @@
+{
+    "data": [
+
+
+      {
+        "question": "What is Aave?",
+        "choices": ["An online portal of the Aar Volkschtunden Eisentchaft, cooperative bank from Aar zone.",
+                    "A portal where people can borrow asssets from many banks.",
+                    "A portal where people can deposit assets on many banks."],
+        "answer": "An open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets."
+      },
+      {
+        "question": "In order to borrow assets...",
+        "choices": ["An approval from Aave technics is necessary. It usually takes two to three weeks. A borrow limit is set acording to financial position and payment history of the client.",
+                    "A deposit of a colateral asset is necesary, with no limit on borrowing afterwards.",
+                    "A proof of humanity is required."],
+        "answer": "A deposit of a colateral asset is necesary, and this determines the limit of the assets that can be borrowed."
+      },
+      {
+        "question": "The most advanced functional version of Aave is...",
+        "choices": ["There is no version, as ethereum blockchain is inmutable.",
+                    "V3.","V1."],
+        "answer": "V2."
+      },
+      {
+        "question": "Aave is ...",
+        "choices": ["just on bitcoin blockchain.","just on ethereum blockchain.","just on polygon blockchain."],
+        "answer": "on both ethereum and polygon blockchain."
+      }
+    ]
+  }

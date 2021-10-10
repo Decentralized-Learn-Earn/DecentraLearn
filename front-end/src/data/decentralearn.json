@@ -1,0 +1,32 @@
+{
+    "data": [
+
+      {
+        "question": "Decentralearn...",
+        "choices": ["Is the learning page of the renown virtual world Decentraland.",
+                    "Is a comunity portal with information about decentralized finance.",
+                     "Is a clasical web application that provides an enviroment to set up learning campaignes from blockchain ecosystem sites rewarded with there native tokens."],
+        "answer": "Is a web3 app that provides an enviroment to set up learning campaignes from blockchain sites rewarded with there native tokens."
+      },
+      {
+        "question": "At Decentralearn...",
+        "choices": ["Only users that can provide an ERC20 token can setup a learning campaign.",
+                    "Only authorized users can setup a learning campaing.",
+                    "Just the owners of Decentralearn  can set up a learning campaign."],
+        "answer": "Anybody can set up a learning campaign."
+      },
+      {
+        "question": "For each learning campaign...",
+        "choices": ["Anybody can add a question  and corresponding answers to that campaign, but the owners of the campaign should aprove them before being rewarded.",
+                    "Anybody can add a question and corresponding answers to that campaign, but the owners of decentralearn should aprove them before being rewarded.",
+                    "Anybody can add a question (and corresponding answers) to that campaign that is reworded with tokens."],
+        "answer": "Questions and answers of each campaign are determined at the begining and are fixed."    },
+      {
+        "question": "Rewards for a succesfull answered campaign.",
+        "choices": ["is an amount of corresponding tokens multiplied by the number of correct answers.",
+                    "is a fix amount of ethereum. ",
+                    "is an amount of ethereum multiplied by the number of correct answers. "],
+        "answer": "is a fix amount of the corresponding token."
+      }
+    ]
+  }
